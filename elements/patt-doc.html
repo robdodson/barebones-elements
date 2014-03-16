@@ -1,0 +1,20 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/core-doc-viewer/context-free-parser.html">
+<polymer-element name="patt-doc" attributes="url">
+  <template>
+    <context-free-parser url="{{url}}" on-data-ready="{{createDoc}}">
+    </context-free-parser>
+
+    <template bind="{{doc}}">
+      <p>{{homepage}}</p>
+    </template>
+
+  </template>
+  <script>
+    Polymer('patt-doc', {
+      createDoc: function(e) {
+        this.doc = e.target.data.classes[0];
+      }
+    });
+  </script>
+</polymer-element>
