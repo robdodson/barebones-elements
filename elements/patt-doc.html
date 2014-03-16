@@ -1,19 +1,76 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/core-doc-viewer/context-free-parser.html">
+<link rel="import" href="../bower_components/marked-js/marked-js.html">
 <polymer-element name="patt-doc" attributes="url">
   <template>
+    <style>
+      details {
+        font-size: 1em;
+        line-height: 1.5;
+        margin: 2.5em 0 0.5em;
+        background-color: #e9e9e9;
+        border-bottom: 4px solid #e9e9e9;
+        position: relative;
+      }
+      
+      details summary {
+        font-size: 1.5em;
+        line-height: 1;
+        text-shadow: 0 1px 0 #fff;
+        background-color: #e9e9e9;
+        border-radius: 0.25em 0 0 0;
+        padding: 0.25em;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        top: -1.5em;
+        cursor: pointer;
+      }
+
+      details summary::-webkit-details-marker {
+        display: none;
+      }
+
+      details section {
+        padding: 1.5%;
+        overflow: hidden;
+      }
+
+      details p {
+        margin: 1% 0 2.5%;
+        color: #888;
+      }
+
+      details p:first-child:before {
+        content: 'Description:';
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      details pre {
+        margin: 0;
+        padding: 1%;
+        background: #FFF;
+      }
+    </style>
     <context-free-parser url="{{url}}" on-data-ready="{{createDoc}}">
     </context-free-parser>
-
-    <template bind="{{doc}}">
-      <p>{{homepage}}</p>
-    </template>
+    
+    <details>
+      <summary title="Show markup and usage">&#8226;&#8226;&#8226;</summary>
+      <section>
+        <template bind="{{doc}}">
+          <marked-js text="{{description}}"></marked-js>
+        </template>
+      </section>
+    </details>
 
   </template>
   <script>
     Polymer('patt-doc', {
       createDoc: function(e) {
         this.doc = e.target.data.classes[0];
+        console.log(this.doc);
       }
     });
   </script>
