@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+
+  <title>core-doc-viewer</title>
+
+  <style>
+    html, body {
+      font-family: Arial, sans-serif;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  </style>
+
+  <script src="bower_components/platform/platform.js"></script>
+  <link rel="import" href="bower_components/core-doc-viewer/core-doc-viewer.html">
+
+</head>
+<body>
+
+  <core-doc-viewer style="position: absolute; top: 64px; left: 0; right: 0; bottom: 0;"></core-doc-viewer>
+
+  <script>
+    document.querySelector('core-doc-viewer').sources = [
+      'bower_components/core-ajax/core-ajax.html', 
+      'bower_components/core-doc-viewer/core-doc-viewer.html'
+    ];
+  </script>
+
+</body>
+</html>
