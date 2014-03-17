@@ -15,7 +15,8 @@
   "dependencies": {
     "polymer": "Polymer/polymer#~0.2.1",
     "core-ajax": "Polymer/core-ajax#~0.2.1",
-    "core-doc-viewer": "Polymer/core-doc-viewer"
+    "core-doc-viewer": "Polymer/core-doc-viewer",
+    "highlightjs": "~8.0.0"
   },
   "resolutions": {
     "polymer": "~0.2.1",

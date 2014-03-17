@@ -10,9 +10,8 @@
     <!-- Kickoff Polymer -->
     <script src="bower_components/platform/platform.js"></script>
     <link rel="import" href="elements/elements.html">
-    <link rel="import" href="bower_components/core-doc-viewer/context-free-parser.html">
   </head>
-  <body>
+  <body unresolved>
     <main role="main">
       <div class="container">
         <header>
@@ -22,12 +21,36 @@
           <h1>Pattern Primer</h1>
           <p class="lede">Common snippets of markup</p>
         </header>
+        
+        <!-- pattern: patt-lead -->
         <section class="pattern">
           <patt-lead>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </patt-lead>
           <patt-doc url="elements/patt-lead.html"></patt-doc>
         </section>
+
+        <!-- pattern: patt-caption -->
+        <section class="pattern">
+          <patt-caption>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </patt-caption>
+          <patt-doc url="elements/patt-caption.html"></patt-doc>
+        </section>
+
+        <!-- pattern: patt-navigation -->
+        <section class="pattern">
+          <patt-navigation>
+            <ul>
+              <li><a href="#">Lorem link</a></li>
+              <li><a href="#">Ipsum link</a></li>
+              <li><a href="#">Dolor link</a></li>
+            </ul>
+          </patt-navigation>
+          <patt-doc url="elements/patt-navigation.html"></patt-doc>
+        </section>
+
       </div>
     </main>
 

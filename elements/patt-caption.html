@@ -1,0 +1,32 @@
+<!--
+/**
+ * @element patt-caption
+ *
+ * Additional text to support an image or chart
+ *
+ * ```
+ * <patt-caption>
+ *   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+ *   eiusmod tempor incididunt ut labore et dolore magna aliqua.
+ * </patt-caption>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="patt-caption" noscript>
+  <template>
+    <style>
+      p {
+        color: #888;
+        font-size: 0.75em; /* 12px */
+        line-height: 1.25; /* 16px */
+        margin: 0.6667em 0; /* 8px 0 */
+      }
+    </style>
+    <p>
+      <content></content>
+    </p>
+  </template>
+</polymer-element>
