@@ -1,0 +1,146 @@
+<!--
+/**
+ * @element bare-progress
+ *
+ * A row of progress indicators
+ *
+ * ```
+ * <bare-progress>
+ *   <ol>
+ *     <li class="is-active">Lorem dolor</li>
+ *     <li>Consectetur</li>
+ *     <li>Adipisicin</li>
+ *     <li>Eiusmod</li>
+ *   </ol>
+ * </bare-progress>
+ * 
+ * <bare-progress
+ *   <ol
+ *     <li class="completed"><a href="#">Lorem dolor</a></li
+ *     <li class="is-active">Consectetur</li
+ *     <li>Adipisicin</li
+ *     <li>Eiusmod</li
+ *   </ol
+ * </bare-progress>
+ * 
+ * <bare-progress>
+ *   <ol>
+ *     <li class="completed"><a href="#">Lorem dolor</a></li>
+ *     <li class="completed"><a href="#">Consectetur</a></li>
+ *     <li class="completed"><a href="#">Adipisicin</a></li>
+ *     <li class="is-active">Eiusmod</li>
+ *   </ol>
+ * </bare-progress>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-progress" noscript>
+  <template>
+    <style>
+      polyfill-next-selector { content: ':host li'; }
+      * /content/ ol li {
+        list-style: none;
+        line-height: 2; /* 32px */
+        background-color: #f6f6f6;
+        margin: 0 1.25em 0.5em 0; /* 0 20px 8px 0 */
+        padding: 0.25em 0.25em 0.25em 0.5em; /* 4px 4px 4px 8px */
+        position: relative;
+        display: inline-block;
+      }
+      
+      polyfill-next-selector { content: ':host li:before'; }
+      * /content/ ol li:before {
+        content: "";
+        font-size: 1em; /* 16px */
+        font-weight: 700;
+        border: solid;
+        border-color: #f6f6f6 transparent;
+        border-width: 1.25em 0 1.25em 1.25em; /* 20px 0 20px 20px */
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -1.25em; /* -20px */
+      }
+      
+      polyfill-next-selector { content: ':host li:first-child'; }
+      * /content/ ol li:first-child {
+        padding-left: 0.75em;
+      }
+      
+      polyfill-next-selector { content: ':host li:first-child:before'; }
+      * /content/ ol li:first-child:before {
+        display: none;
+      }
+
+      polyfill-next-selector { content: ':host li:after'; }
+      * /content/ ol li:after {
+        content: "";
+        font-size: 1em; /* 16px */
+        border: solid;
+        border-color: transparent #f6f6f6;
+        border-width: 1.25em 0 1.25em 1.25em; /* 20px 0 20px 20px */
+        display: block;
+        position: absolute;
+        right: -1.25em; /* -20px */
+        top: 0;
+      }
+      
+      polyfill-next-selector { content: ':host li.completed'; }
+      * /content/ ol li.completed {
+        background-color: #e9e9e9;
+      }
+      
+      polyfill-next-selector { content: ':host li.completed:hover'; }
+      * /content/ ol li.completed:hover {
+        background-color: #e9e9e9;
+      }
+      
+      polyfill-next-selector { content: ':host li.completed:before'; }
+      * /content/ ol li.completed:before {
+        border-color: #e9e9e9 transparent;
+      }
+      
+      polyfill-next-selector { content: ':host li.completed:hover:before'; }
+      * /content/ ol li.completed:hover:before {
+        border-color: #e9e9e9 transparent;
+      }
+      
+      polyfill-next-selector { content: ':host li.completed:after'; }
+      * /content/ ol li.completed:after {
+        border-color: transparent #e9e9e9;
+      }
+      
+      polyfill-next-selector { content: ':host li.completed:hover:after'; }
+      * /content/ ol li.completed:hover:after {
+        border-color: transparent #e9e9e9;
+      }
+      
+      polyfill-next-selector { content: ':host li.is-active'; }
+      * /content/ ol li.is-active {
+        color: #fff;
+        font-weight: 700;
+        background-color: #25d;
+      }
+      
+      polyfill-next-selector { content: ':host li.is-active:before'; }
+      * /content/ ol li.is-active:before {
+        border-color: #25d transparent;
+      }
+
+      polyfill-next-selector { content: ':host li.is-active:after'; }
+      * /content/ ol li.is-active:after {
+        border-color: transparent #25d;
+      }
+
+      polyfill-next-selector { content: ':host li a'; }
+      * /content/ ol li a {
+        border: 0;
+        display: block;
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>

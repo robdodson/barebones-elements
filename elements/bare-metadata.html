@@ -1,0 +1,72 @@
+<!--
+/**
+ * @element bare-metadata
+ *
+ * A block of metadata relating to some content
+ *
+ * ```
+ * <bare-metadata>
+ *   <dl>
+ *     <dt>Published</dt>
+ *     <dd><time datetime="1963-03-27T12:00Z">27 March 1963</time></dd>
+ *     <dt>Author</dt>
+ *     <dd>Richard Beeching</dd>
+ *     <dt>Policy Area</dt>
+ *     <dd>Transport</dd>
+ *   </dl>
+ * </bare-metadata>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-metadata" noscript>
+  <template>
+    <style>
+      polyfill-next-selector { content: ':host dl'; }
+      * /content/ dl {
+        font-size: 0.75em;
+        line-height: 1.3334;
+        overflow: hidden;
+      }
+
+      polyfill-next-selector { content: ':host dt'; }
+      * /content/ dl dt {
+        font-weight: 400;
+        padding-top: 0.5em;
+      }
+
+      polyfill-next-selector { content: ':host dd'; }
+      * /content/ dl dd {
+        color: #888;
+        margin-left: 0;
+        border-bottom: 1px solid #e9e9e9;
+        padding-bottom: 0.5em;
+      }
+
+      @media screen and (min-width: 40em) {
+        polyfill-next-selector { content: ':host dt'; }
+        * /content/ dl dt {
+          padding: 0.5em 0;
+          width: 25%;
+          float: left;
+          clear: left;
+          display: block;
+        }
+        
+        polyfill-next-selector { content: ':host dd'; }
+        * /content/ dl dd {
+          -moz-box-sizing: content-box;
+          -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+          margin-left: -25%;
+          padding: 0.5em 0 0.5em 25%;
+          width: 75%;
+          float: right;
+        }
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>
