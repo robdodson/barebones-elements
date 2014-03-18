@@ -1,0 +1,48 @@
+<!--
+/**
+ * @element bare-breadcrumb-nav
+ *
+ * A row of breadcrumb links
+ *
+ * ```
+ * <bare-breadcrumb-nav>
+ *   <a href="#">Lorem section</a> /
+ *   <a href="#">Dolor section</a> /
+ *   <a href="#">Ipsum section</a> /
+ *   <strong class="is-active">Current section</strong>
+ * </bare-breadcrumb-nav>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-breadcrumb-nav" noscript>
+  <template>
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+      :host {
+        color: #ccc;
+        font-size: 0.75em; /* 12px */
+        line-height: 1.3334; /* 16px */
+        margin-top: 0;
+        border: 0 none;
+      }
+      
+      polyfill-next-selector { content: ':host a, :host strong'; }
+      content /content/ a,
+      content /content/ strong {
+        padding: 0 0.5em; /* 8px */
+        border: 0;
+      }
+
+      polyfill-next-selector { content: ':host a:first-child'; }
+      content /content/ a:first-child {
+        padding-left: 0;
+      }
+    </style>
+    <nav role="navigation">
+      <content></content>
+    </nav>
+  </template>
+</polymer-element>
