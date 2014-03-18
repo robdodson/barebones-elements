@@ -1,0 +1,65 @@
+<!--
+/**
+ * @element bare-stats
+ *
+ * A row of stats and links
+ *
+ * ```
+ * <bare-stats>
+ *   <ul>
+ *     <li><a href="#">1,234 <span>lorem</span></a></li>
+ *     <li><a href="#">567 <span>ipsum</span></a></li>
+ *     <li><a href="#">23,456 <span>dolor</span></a></li>
+ *   </ul>
+ * </bare-stats>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-stats" noscript>
+  <template>
+    <style>
+      :host {
+        display: block;
+        overflow: hidden;
+      }
+      
+      polyfill-next-selector { content: ':host li'; }
+      * /content/ ul li {
+        list-style: none;
+        margin: 0 0.75em 0 0; /* 0 12px 0 0 */
+        padding: 0 0.75em 0 0; /* 0 12px 0 0 */
+        border-right: 1px solid #e9e9e9;
+        float: left;
+      }
+      
+      polyfill-next-selector { content: ':host li:last-child'; }
+      * /content/ ul li:last-child {
+        margin: 0;
+        padding: 0;
+        border: none;
+      }
+      
+      polyfill-next-selector { content: ':host a'; }
+      * /content/ ul a {
+        font-weight: 700;
+        font-size: 1.125em; /* 18px */
+        line-height: 1.3334; /* 24px */
+        border: 0 none;
+        display: block;
+        float: left;
+      }
+      
+      polyfill-next-selector { content: ':host span'; }
+      * /content/ ul span {
+        font-weight: 400;
+        font-size: 0.6667em; /* 12px */
+        line-height: 1.3334; /* 16px */
+        display: block;
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>

@@ -6,26 +6,28 @@
  *
  * ```
  * <bare-tags>
- *   <li><a href="#" rel="tag" data-rank="1">Clavicle</a></li>
- *   <li><a href="#" rel="tag" data-rank="4">Ethmoid</a></li>
- *   <li><a href="#" rel="tag" data-rank="6">Frontal</a></li>
- *   <li><a href="#" rel="tag" data-rank="2">Incus</a></li>
- *   <li><a href="#" rel="tag" data-rank="2">Lacrimal</a></li>
- *   <li><a href="#" rel="tag" data-rank="2">Malleus</a></li>
- *   <li><a href="#" rel="tag" data-rank="3">Mandible</a></li>
- *   <li><a href="#" rel="tag" data-rank="3">Maxilla</a></li>
- *   <li><a href="#" rel="tag" data-rank="3">Palatine</a></li>
- *   <li><a href="#" rel="tag" data-rank="5">Parietal</a></li>
- *   <li><a href="#" rel="tag" data-rank="4">Occipital</a></li>
- *   <li><a href="#" rel="tag" data-rank="1">Ribs</a></li>
- *   <li><a href="#" rel="tag" data-rank="1">Scapula</a></li>
- *   <li><a href="#" rel="tag" data-rank="4">Sphenoid</a></li>
- *   <li><a href="#" rel="tag" data-rank="1">Stapes</a></li>
- *   <li><a href="#" rel="tag" data-rank="1">Sternum</a></li>
- *   <li><a href="#" rel="tag" data-rank="5">Temporal</a></li>
- *   <li><a href="#" rel="tag" data-rank="2">Vomer</a></li>
- *   <li><a href="#" rel="tag" data-rank="2">Vomer</a></li>
- *   <li><a href="#" rel="tag" data-rank="3">Zygomatic</a></li>
+ *   <ol>
+ *     <li><a href="#" rel="tag" data-rank="1">Clavicle</a></li>
+ *     <li><a href="#" rel="tag" data-rank="4">Ethmoid</a></li>
+ *     <li><a href="#" rel="tag" data-rank="6">Frontal</a></li>
+ *     <li><a href="#" rel="tag" data-rank="2">Incus</a></li>
+ *     <li><a href="#" rel="tag" data-rank="2">Lacrimal</a></li>
+ *     <li><a href="#" rel="tag" data-rank="2">Malleus</a></li>
+ *     <li><a href="#" rel="tag" data-rank="3">Mandible</a></li>
+ *     <li><a href="#" rel="tag" data-rank="3">Maxilla</a></li>
+ *     <li><a href="#" rel="tag" data-rank="3">Palatine</a></li>
+ *     <li><a href="#" rel="tag" data-rank="5">Parietal</a></li>
+ *     <li><a href="#" rel="tag" data-rank="4">Occipital</a></li>
+ *     <li><a href="#" rel="tag" data-rank="1">Ribs</a></li>
+ *     <li><a href="#" rel="tag" data-rank="1">Scapula</a></li>
+ *     <li><a href="#" rel="tag" data-rank="4">Sphenoid</a></li>
+ *     <li><a href="#" rel="tag" data-rank="1">Stapes</a></li>
+ *     <li><a href="#" rel="tag" data-rank="1">Sternum</a></li>
+ *     <li><a href="#" rel="tag" data-rank="5">Temporal</a></li>
+ *     <li><a href="#" rel="tag" data-rank="2">Vomer</a></li>
+ *     <li><a href="#" rel="tag" data-rank="2">Vomer</a></li>
+ *     <li><a href="#" rel="tag" data-rank="3">Zygomatic</a></li>
+ *   </ol>
  * </bare-tags>
  * ```
  * 
@@ -37,7 +39,7 @@
   <template>
     <style>
       polyfill-next-selector { content: ':host li'; }
-      * /content/ li {
+      * /content/ ol li {
         list-style: none;
         margin: 0 0.3334em 0 0;
         display: inline;
@@ -45,43 +47,43 @@
       }
 
       /* 20px/20px */
-      polyfill-next-selector { content: ':host li [data-rank="6"]'; }
-      * /content/ li [data-rank="6"] {
+      polyfill-next-selector { content: ':host [data-rank="6"]'; }
+      * /content/ ol [data-rank="6"] {
         font-size: 1.2500em;
         line-height: 1.0000;
       }
 
       /* 18px/20px */
-      polyfill-next-selector { content: ':host li [data-rank="5"]'; }
-      * /content/ li [data-rank="5"] {
+      polyfill-next-selector { content: ':host [data-rank="5"]'; }
+      * /content/ ol [data-rank="5"] {
         font-size: 1.1250em;
         line-height: 1.1111;
       }
 
       /* 16px/20px */
-      polyfill-next-selector { content: ':host li [data-rank="4"]'; }
-      * /content/ li [data-rank="4"] {
+      polyfill-next-selector { content: ':host [data-rank="4"]'; }
+      * /content/ ol [data-rank="4"] {
         font-size: 1.0000em;
         line-height: 1.2500;
       }
 
       /* 14px/20px */
-      polyfill-next-selector { content: ':host li [data-rank="3"]'; }
-      * /content/ li [data-rank="3"] {
+      polyfill-next-selector { content: ':host [data-rank="3"]'; }
+      * /content/ ol [data-rank="3"] {
         font-size: 0.8750em;
         line-height: 1.4286;
       }
 
       /* 12px/20px */
-      polyfill-next-selector { content: ':host li [data-rank="2"]'; }
-      * /content/ li [data-rank="2"] {
+      polyfill-next-selector { content: ':host [data-rank="2"]'; }
+      * /content/ ol [data-rank="2"] {
         font-size: 0.7500em;
         line-height: 1.6667;
       }
 
       /* 11px/20px */
-      polyfill-next-selector { content: ':host li [data-rank="1"]'; }
-      * /content/ li [data-rank="1"] {
+      polyfill-next-selector { content: ':host [data-rank="1"]'; }
+      * /content/ ol [data-rank="1"] {
         font-size: 0.6875em;
         line-height: 1.8181;
       }
