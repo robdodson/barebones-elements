@@ -1,34 +1,34 @@
-polyfill-next-selector { content: 'nav ul'; }
-nav content /content/ ul {
+polyfill-next-selector { content: ':host ul'; }
+content /content/ ul {
   margin: 0;
 }
 
-polyfill-next-selector { content: 'nav li'; }
-nav content /content/ ul li {
+polyfill-next-selector { content: ':host li'; }
+content /content/ ul li {
   margin: 0;
   display: inline;
 }
 
-polyfill-next-selector { content: 'nav a'; }
-nav content /content/ ul a {
+polyfill-next-selector { content: ':host a'; }
+content /content/ ul a {
   border: 0;
   border-right: 1px solid #e9e9e9;
   padding: 0.5em 0.75em; /* 8px 12px */
   display: inline-block;
 }
 
-polyfill-next-selector { content: 'nav li:last-child a'; }
-nav content /content/ ul li:last-child a {
+polyfill-next-selector { content: ':host li:last-child a'; }
+content /content/ ul li:last-child a {
   border-right: 0;
 }
 
-polyfill-next-selector { content: 'nav a:hover'; }
-nav content /content/ ul a:hover {
+polyfill-next-selector { content: ':host a:hover'; }
+content /content/ ul a:hover {
   background-color: #f6f6f6;
 }
 
-polyfill-next-selector { content: 'nav a.is-active'; }
-nav content /content/ ul a.is-active {
+polyfill-next-selector { content: ':host a.is-active'; }
+content /content/ ul a.is-active {
   color: #444;
   font-weight: 700;
 }
