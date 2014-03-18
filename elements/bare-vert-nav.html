@@ -1,0 +1,62 @@
+<!--
+/**
+ * @element bare-vert-nav
+ *
+ * A veritcal row of links
+ *
+ * ```
+ * <bare-vert-nav>
+ *   <ul>
+ *     <li><a href="#" class="is-active">Active tab</a></li>
+ *     <li><a href="#">Lorem tab</a></li>
+ *     <li><a href="#">Ipsum tab</a></li>
+ *     <li><a href="#">Dolor tab</a></li>
+ *   </ul>
+ * </bare-vert-nav>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-vert-nav" noscript>
+  <template>
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+      polyfill-next-selector { content: 'nav li'; }
+      * /content/ ul li {
+        margin: 0;
+        display: block;
+      }
+      
+      polyfill-next-selector { content: 'nav a'; }
+      * /content/ ul a {
+        border-right: 0;
+        border-bottom: 1px solid #e9e9e9;
+        display: block;
+      }
+
+      polyfill-next-selector { content: 'nav a.is-active'; }
+      * /content/ ul li a.is-active {
+        background-color: #e9e9e9;
+        position: relative;
+      }
+
+      polyfill-next-selector { content: 'nav a.is-active:after'; }
+      * /content/ ul li a.is-active:after {
+        content: "";
+        font-size: 1em; /* 16px */
+        border: solid;
+        border-color: transparent #e9e9e9;
+        border-width: 1.25em 0 1.25em 1.25em; /* 16px 0 16px 16px */
+        display: block;
+        position:absolute;
+        right: -1.25em; /* -16px */
+        top: 0;
+      }
+    </style>
+    <nav role="navigation">
+      <content></content>
+    </nav>
+  </template>
+</polymer-element>

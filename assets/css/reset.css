@@ -257,21 +257,6 @@ dfn[title] {
   border-bottom: 1px dotted rgba(0,0,0,0.3);
   cursor: help;
 }
-code, samp {
-  font-family: 'DejaVu Sans Mono',Inconsolata,Consolas,'Lucida Console',monospace;
-  font-size: 1em; /* 16px */
-  line-height: 90%;
-  }
-  code {
-    color: #b03;
-  }
-  code .comment {
-    color: #999;
-  }
-samp {
-  background-color: #f9f9f9;
-  padding: 0.25em;
-}
 kbd {
   color: #666;
   font-family: inherit;

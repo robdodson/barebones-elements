@@ -1,0 +1,47 @@
+<!--
+/**
+ * @element bare-tabbed-nav
+ *
+ * A tabbed row of links
+ *
+ * ```
+ * <bare-tabbed-nav>
+ *   <ul>
+ *     <li><a href="#" class="is-active">Active tab</a></li>
+ *     <li><a href="#">Lorem tab</a></li>
+ *     <li><a href="#">Ipsum tab</a></li>
+ *     <li><a href="#">Dolor tab</a></li>
+ *   </ul>
+ * </bare-tabbed-nav>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-tabbed-nav" noscript>
+  <template>
+    <link rel="stylesheet" href="css/nav.css">
+    <style>
+      :host {
+        display: block;
+        border-top: 0;
+        border-bottom: 1px solid #e9e9e9;
+        padding: 0;
+        margin-left: 1em;
+      }
+
+      polyfill-next-selector { content: ':host ul a.is-active'; }
+      * /content/ ul a.is-active {
+        background-color: #fff;
+        margin-bottom: -1px;
+        border: 1px solid #e9e9e9;
+        border-bottom-color: #fff;
+        border-radius: 0.25em 0.25em 0 0; /* 4px 4px 0 0 */
+      }
+    </style>
+    <nav role="navigation">
+      <content></content>
+    </nav>
+  </template>
+</polymer-element>
