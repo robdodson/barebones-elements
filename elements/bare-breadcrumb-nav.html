@@ -30,14 +30,14 @@
       }
       
       polyfill-next-selector { content: ':host a, :host strong'; }
-      content /content/ a,
-      content /content/ strong {
+      * /content/ a,
+      * /content/ strong {
         padding: 0 0.5em; /* 8px */
         border: 0;
       }
 
       polyfill-next-selector { content: ':host a:first-child'; }
-      content /content/ a:first-child {
+      * /content/ a:first-child {
         padding-left: 0;
       }
     </style>

@@ -1,16 +1,16 @@
 polyfill-next-selector { content: ':host ul'; }
-content /content/ ul {
+* /content/ ul {
   margin: 0;
 }
 
 polyfill-next-selector { content: ':host li'; }
-content /content/ ul li {
+* /content/ ul li {
   margin: 0;
   display: inline;
 }
 
 polyfill-next-selector { content: ':host a'; }
-content /content/ ul a {
+* /content/ ul a {
   border: 0;
   border-right: 1px solid #e9e9e9;
   padding: 0.5em 0.75em; /* 8px 12px */
@@ -18,17 +18,17 @@ content /content/ ul a {
 }
 
 polyfill-next-selector { content: ':host li:last-child a'; }
-content /content/ ul li:last-child a {
+* /content/ ul li:last-child a {
   border-right: 0;
 }
 
 polyfill-next-selector { content: ':host a:hover'; }
-content /content/ ul a:hover {
+* /content/ ul a:hover {
   background-color: #f6f6f6;
 }
 
 polyfill-next-selector { content: ':host a.is-active'; }
-content /content/ ul a.is-active {
+* /content/ ul a.is-active {
   color: #444;
   font-weight: 700;
 }

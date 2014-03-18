@@ -25,25 +25,25 @@
     <link rel="stylesheet" href="css/nav.css">
     <style>
       polyfill-next-selector { content: ':host a'; }
-      content /content/ ul a {
+      * /content/ ul a {
         padding: 0.5em 1em; /* 8px 16px */
       }
       
       polyfill-next-selector { content: ':host a.is-active'; }
-      content /content/ ul a.is-active {
+      * /content/ ul a.is-active {
         background-color: #e9e9e9;
       }
       
       polyfill-next-selector { content: ':host a[rel="prev"], :host a[rel="next"]'; }
-      content /content/ ul a[rel="prev"],
-      content /content/ ul a[rel="next"] {
+      * /content/ ul a[rel="prev"],
+      * /content/ ul a[rel="next"] {
         border: 0;
       }
       
       polyfill-next-selector { content: ':host a[rel="prev"]:hover, :host a[rel="next"]:hover'; }
-      content /content/ ul a[rel="prev"]:hover,
-      content /content/ ul a[rel="next"]:hover {
-        background-color: red;
+      * /content/ ul a[rel="prev"]:hover,
+      * /content/ ul a[rel="next"]:hover {
+        background-color: transparent;
       }
     </style>
     <nav role="navigation">
