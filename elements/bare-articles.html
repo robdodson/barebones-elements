@@ -1,0 +1,58 @@
+<!--
+/**
+ * @element bare-articles
+ *
+ * A list of articles with summaries
+ *
+ * ```
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-articles" noscript>
+  <template>
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+      * /content/ ol {
+        overflow: hidden;
+      }
+
+      * /content/ ol a {
+        display: block;
+      }
+
+      * /content/ ol a:hover {
+        background-color: rgba(85,34,221,0.05);
+      }
+
+      * /content/ ol a:active {
+        background-color: rgba(221,34,85,0.05);
+      }
+
+      * /content/ ol li {
+        list-style: none;
+        margin-left: 0;
+      }
+
+      * /content/ ol .h {
+        margin-top: 0;
+      }
+      
+      * /content/ ol p {
+        color: #444;
+      }
+
+      * /content/ ol article {
+        display: block;
+      }
+      
+      * /content/ ol article img.pull-left {
+        margin-bottom: 0;
+        width: 25%;
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>

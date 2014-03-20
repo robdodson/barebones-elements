@@ -1,0 +1,72 @@
+<!--
+/**
+ * @element bare-code
+ *
+ * An example snippet of code
+ *
+ * ```
+ * <bare-code>
+ *   <ol>
+ *     <li><code>&#60;?php</code></li>
+ *     <li class="tab1"><code>echo 'Hello World!'; <span class="comment">// print
+ *     'Hello World'</span></code></li>
+ *     <li><code>?&#62;</code></li>
+ *   </ol>
+ * </bare-code>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-code" noscript>
+  <template>
+    <style>
+      :host {
+        font-family: 'DejaVu Sans Mono', Inconsolata, Consolas, 'Lucida Console', monospace;
+        font-size: 0.75em; /* 12px */
+        line-height: 1.6667; /* 20px */
+      }
+      
+      polyfill-next-selector { content: ':host ol'; }
+      * /content/ ol {
+        color: #888;
+        margin: 1.3334em 0 1.3334em 3em; /* 16px 0 16px 36px */
+        line-height: 2; /* 24px */
+      }
+
+      polyfill-next-selector { content: ':host li'; }
+      * /content/ ol li {
+        list-style: decimal-leading-zero;
+        background: #f6f6f6;
+        margin: 0 0 -1px 0;
+        border-top: 1px solid #fff;
+        padding: 0 0.5em; /* 0 8px */
+      }
+
+      polyfill-next-selector { content: ':host code'; }
+      * /content/ ol code,
+      * /content/ code {
+        font-size: 1.25em;
+        color: #b03;
+      }
+
+      polyfill-next-selector { content: ':host .comment'; }
+      * /content/ ol .comment {
+        color: #999;
+      }
+
+      polyfill-next-selector { content: ':host .tab1'; }
+      * /content/ ol .tab1 { padding-left: 4ex; }
+      polyfill-next-selector { content: ':host .tab2'; }
+      * /content/ ol .tab2 { padding-left: 8ex; }
+      polyfill-next-selector { content: ':host .tab3'; }
+      * /content/ ol .tab3 { padding-left: 12ex; }
+      polyfill-next-selector { content: ':host .tab4'; }
+      * /content/ ol .tab4 { padding-left: 16ex; }
+      polyfill-next-selector { content: ':host .tab5'; }
+      * /content/ ol .tab5 { padding-left: 20ex; }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>
