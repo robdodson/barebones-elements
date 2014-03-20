@@ -1,0 +1,58 @@
+<!--
+/**
+ * @element bare-tooltip
+ *
+ * Content preceding the main body of a page or article.
+ *
+ * ```
+ * <bare-tooltip tip="Lorem ipsum dolor sit amet consectetur adipiscing elit.
+ * Donec a diam lectus sed sit amet ipsum mauris.">
+ * Hover to reveal a tooltip
+ * </bare-tooltip>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-tooltip" noscript>
+  <template>
+    <style>
+      :host {
+        position: relative;
+      }
+
+      :host:hover:after {
+        content: attr(tip);
+        color: #fff;
+        font-size: 0.75em; /* 12px */
+        line-height: 1.3334em; /* 16px */
+        text-align: left;
+        background-color: #666;
+        border-radius: 0.3334em; /* 4px */
+        padding: 0.6667em; /* 8px */
+        width: 16.5em; /* 200px */
+        opacity: 0.9;
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 2em; /* 24px */
+        z-index: 98;
+      }
+
+      :host:hover:before {
+        content: "";
+        border: solid;
+        border-color: #666 transparent;
+        border-width: 0.5em 0.5em 0 0.5em; /* 6px 6px 0 6px */
+        opacity: 0.9;
+        display: block;
+        left: 1em; /* 12px */
+        bottom: 1em; /* 12px */
+        position: absolute;
+        z-index: 99;
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>
