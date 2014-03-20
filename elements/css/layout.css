@@ -1,12 +1,14 @@
 /* Can't use * /content/ * here because of crbug.com/353606 */
 
 /* Pull left */
+polyfill-next-selector { content: ':host ol .pull-left, :host ul .pull-left, :host .pull-left'; }
 * /content/ ol .pull-left,
 * /content/ ul .pull-left,
 * /content/ .pull-left {
   float: left;
 }
 
+polyfill-next-selector { content: ':host ol img.pull-left, :host ul img.pull-left, :host img.pull-left'; }
 * /content/ ol img.pull-left,
 * /content/ ul img.pull-left,
 * /content/ img.pull-left {
@@ -14,12 +16,14 @@
 }
 
 /* Pull right */
+polyfill-next-selector { content: ':host ol .pull-right, :host ul .pull-right, :host .pull-right'; }
 * /content/ ol .pull-right,
 * /content/ ul .pull-right,
 * /content/ .pull-right {
   float: right;
 }
 
+polyfill-next-selector { content: ':host ol img.pull-right, :host ul img.pull-right, :host img.pull-right'; }
 * /content/ ol img.pull-right,
 * /content/ ul img.pull-right,
 * /content/ img.pull-right {
