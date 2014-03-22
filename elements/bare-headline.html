@@ -1,0 +1,45 @@
+<!--
+/**
+ * @element bare-headline
+ *
+ * A standout headline for some content
+ *
+ * ```
+ * <bare-headline>
+ *   Lorem ipsum dolor sit
+ * </bare-headline>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-headline" noscript>
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      h1 {
+        color: #333;
+        font-weight: 700;
+        font-size: 2.5em; /* 40px */
+        line-height: 1; /* 40px */
+        margin: 0.4em 0 0; /* 16px 0 0 */
+        -webkit-font-smoothing: antialiased;
+        letter-spacing: -0.03125em;
+      }
+
+      @media screen and (min-width: 30em) {
+        h1 {
+          font-size: 4em; /* 64px */
+          margin: 0.25em 0 0; /* 16px 0 0 */
+        }
+      }
+    </style>
+    <h1>
+      <content></content>
+    </h1>
+  </template>
+</polymer-element>

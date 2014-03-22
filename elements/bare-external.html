@@ -1,0 +1,29 @@
+<!--
+/**
+ * @element bare-external
+ *
+ * A link which will take you out of the site
+ *
+ * ```
+ * <bare-external>
+ *   <a href="#">External link</a>
+ * </bare-external>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-external" noscript>
+  <template>
+    <style>
+      polyfill-next-selector { content: ':host a'; }
+      * /content/ a {
+        background: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCw0IEw4LDQgTDYsNiBMMiw2IEwyLDE0IEwxMCwxNCBMMTAsMTAuNSBMMTIsOC41IEwxMiwxNiBMMCwxNiBaIE0wLDQiIGZpbGw9InJnYmEoMCwwLDAsMC4zMykiPjwvcGF0aD48cGF0aCBkPSJNNiwwIEwxNiwwIEwxNiwxMCBMMTQsMTAgTDE0LDMuNSBMNy41LDEwIEw2LDguNSBMMTIuNSwyIEw2LDIgWiBNNiwwIiBmaWxsPSJyZ2JhKDAsMCwwLDAuMzMpIj48L3BhdGg+PC9zdmc+) no-repeat right 40%;
+        background-size: 12px;
+        padding-right: 1em;
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>

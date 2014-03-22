@@ -1,0 +1,99 @@
+<!--
+/**
+ * @element bare-articles
+ *
+ * A list of articles with summaries
+ *
+ * ```
+ * <bare-articles>
+ *   <ol>
+ *     <li><a href="#">
+ *       <bare-module>
+ *         <article>
+ *           <img class="pull-left" src="http://lorempixum.com/240/180/city/4" alt=""/>
+ *           <bare-headline>Defiant North Korea in rocket success</bare-headline>
+ *           <bare-caption><time pubdate datetime="2012-12-12T19:10-00:00">12 December 2012<
+ *           time></bare-caption>
+ *           <p>North Korea successfully launches a long-range rocket to put a satellite into space, as neighbours accuse it of a disguised missile test.</p>
+ *         </article>
+ *       </bare-module>
+ *     </a></li>
+ *     <li><a href="#">
+ *       <bare-module>
+ *         <article>
+ *           <img class="pull-left" src="http://lorempixum.com/240/180/city/4" alt=""/>
+ *           <bare-headline>Defiant North Korea in rocket success</bare-headline>
+ *           <bare-caption><time pubdate datetime="2012-12-12T19:10-00:00">12 December 2012<
+ *           time></bare-caption>
+ *           <p>North Korea successfully launches a long-range rocket to put a satellite into space, as neighbours accuse it of a disguised missile test.</p>
+ *         </article>
+ *       </bare-module>
+ *     </a></li>
+ *     <li><a href="#">
+ *       <bare-module>
+ *         <article>
+ *           <img class="pull-left" src="http://lorempixum.com/240/180/city/4" alt=""/>
+ *           <bare-headline>Defiant North Korea in rocket success</bare-headline>
+ *           <bare-caption><time pubdate datetime="2012-12-12T19:10-00:00">12 December 2012<
+ *           time></bare-caption>
+ *           <p>North Korea successfully launches a long-range rocket to put a satellite into space, as neighbours accuse it of a disguised missile test.</p>
+ *         </article>
+ *       </bare-module>
+ *     </a></li>
+ *   </ol>
+ * </bare-articles>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-articles" noscript>
+  <template>
+    <link rel="stylesheet" href="css/layout.css">
+    <style>
+      polyfill-next-selector { content: ':host ol'; }
+      * /content/ ol {
+        overflow: hidden;
+      }
+
+      polyfill-next-selector { content: ':host ol a'; }
+      * /content/ ol a {
+        display: block;
+      }
+
+      polyfill-next-selector { content: ':host ol a:hover'; }
+      * /content/ ol a:hover {
+        background-color: rgba(85,34,221,0.05);
+      }
+
+      polyfill-next-selector { content: ':host ol a:active'; }
+      * /content/ ol a:active {
+        background-color: rgba(221,34,85,0.05);
+      }
+
+      polyfill-next-selector { content: ':host ol li'; }
+      * /content/ ol li {
+        list-style: none;
+        margin-left: 0;
+      }
+      
+      polyfill-next-selector { content: ':host ol p'; }
+      * /content/ ol p {
+        color: #444;
+      }
+
+      polyfill-next-selector { content: ':host ol article'; }
+      * /content/ ol article {
+        display: block;
+      }
+      
+      polyfill-next-selector { content: ':host ol article img.pull-left'; }
+      * /content/ ol article img.pull-left {
+        margin-bottom: 0;
+        width: 25%;
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>

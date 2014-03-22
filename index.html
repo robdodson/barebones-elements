@@ -19,6 +19,14 @@
           <p class="lede">Common snippets of markup</p>
         </header>
         
+        <!-- pattern: bare-headline -->
+        <section class="pattern">
+          <bare-headline>
+            Lorem ipsum dolor sit
+          </bare-headline>
+          <bare-doc url="elements/bare-headline.html"></bare-doc>
+        </section>
+
         <!-- pattern: bare-lead -->
         <section class="pattern">
           <bare-lead>
@@ -184,6 +192,93 @@
             </dl>
           </bare-metadata>
           <bare-doc url="elements/bare-metadata.html"></bare-doc>
+        </section>
+
+        <!-- pattern: bare-code -->
+        <section class="pattern">
+          <bare-code>
+            <ol>
+              <li><code>&#60;?php</code></li>
+              <li class="tab1"><code>echo 'Hello World!'; <span class="comment">// print 'Hello World'</span></code></li>
+              <li><code>?&#62;</code></li>
+            </ol>
+          </bare-code>
+          <bare-doc url="elements/bare-code.html"></bare-doc>
+        </section>
+
+        <!-- pattern: bare-module -->
+        <section class="pattern">
+          <bare-module>
+            <article>
+              <bare-headline>Defiant North Korea in rocket success</bare-headline>
+              <bare-caption><time pubdate datetime="2012-12-12T19:10-00:00">12 December 2012</time></bare-caption>
+              <p>North Korea successfully launches a long-range rocket to put a satellite into space, as neighbours accuse it of a disguised missile test.</p>
+            </article>
+          </bare-module>
+          <bare-doc url="elements/bare-module.html"></bare-doc>
+        </section>
+
+        <!-- pattern: bare-articles -->
+        <section class="pattern">
+          <bare-articles>
+            <ol>
+              <li><a href="#">
+                <bare-module>
+                  <article>
+                    <img class="pull-left" src="http://lorempixum.com/240/180/city/4" alt=""/>
+                    <bare-headline>Defiant North Korea in rocket success</bare-headline>
+                    <bare-caption><time pubdate datetime="2012-12-12T19:10-00:00">12 December 2012</time></bare-caption>
+                    <p>North Korea successfully launches a long-range rocket to put a satellite into space, as neighbours accuse it of a disguised missile test.</p>
+                  </article>
+                </bare-module>
+              </a></li>
+              <li><a href="#">
+                <bare-module>
+                  <article>
+                    <img class="pull-left" src="http://lorempixum.com/240/180/city/5" alt=""/>
+                    <bare-headline>Big decline in UK unemployment</bare-headline>
+                    <bare-caption><time pubdate datetime="2012-12-12T18:10-00:00">12 December 2012</time></bare-caption>
+                    <p>The number of people out of work fell by 82,000 between August and October, to 2.51 million, official figures show.</p>
+                  </article>
+                </bare-module>
+              </a></li>
+              <li><a href="#">
+                <bare-module>
+                  <article>
+                    <img class="pull-left" src="http://lorempixum.com/240/180/city/6" alt=""/>
+                    <bare-headline>Sitar maestro Ravi Shankar dies</bare-headline>
+                    <bare-caption><time pubdate datetime="2012-12-12T17:10-00:00">12 December 2012</time></bare-caption>
+                    <p>Sitar player Ravi Shankar, who popularised Indian music around the world, dies in hospital in the United States at the age of 92.</p>
+                  </article>
+                </bare-module>
+              </a></li>
+            </ol>
+          </bare-articles>
+          <bare-doc url="elements/bare-articles.html"></bare-doc>
+        </section>
+
+        <!-- pattern: bare-tooltip -->
+        <section class="pattern">
+          <bare-tooltip tip="Lorem ipsum dolor sit amet consectetur adipiscing elit. Donec a diam lectus sed sit amet ipsum mauris.">
+            <a href="#">Hover to reveal a tooltip</a>
+          </bare-tooltip>
+          <bare-doc url="elements/bare-tooltip.html"></bare-doc>
+        </section>
+
+        <!-- pattern: bare-tag -->
+        <section class="pattern">
+          <bare-tag>
+            <a href="#">tag name</a>
+          </bare-tag>
+          <bare-doc url="elements/bare-tag.html"></bare-doc>
+        </section>
+
+        <!-- pattern: bare-external -->
+        <section class="pattern">
+          <bare-external>
+            <a href="#">External link</a>
+          </bare-external>
+          <bare-doc url="elements/bare-tag.html"></bare-doc>
         </section>
 
       </div>

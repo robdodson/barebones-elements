@@ -1,0 +1,30 @@
+<!--
+/**
+ * @element bare-tag
+ *
+ * A category tag
+ *
+ * ```
+ * <bare-tag>
+ *   <a href="#">tag name</a>
+ * </bare-tag>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-tag" noscript>
+  <template>
+    <style>
+      polyfill-next-selector { content: ':host a'; }
+      * /content/ a {
+        font-size: 0.75em; /* 12px */
+        line-height: 1.3334; /* 16px */
+        text-transform: lowercase;
+        border: 0;
+      }
+    </style>
+    <content></content>
+  </template>
+</polymer-element>
