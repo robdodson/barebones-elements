@@ -206,6 +206,58 @@
           <bare-doc url="elements/bare-code.html"></bare-doc>
         </section>
 
+        <!-- pattern: bare-img -->
+        <section class="pattern">
+          <p>
+            <bare-img
+              src="http://lorempixum.com/180/136/nature/3"
+              alt="nature photo"
+              pull="right"></bare-img>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Sed sit amet ipsum mauris.
+          </p>
+          <bare-doc>
+          /**
+           * @element bare-img
+           *
+           * A basic img wrapper with float helpers
+           *
+           * ```
+           * &lt;p&gt;
+           *  &lt;bare-img src="path/to/img.jpg" pull="right" alt="cool photo"&gt;&lt;/bare-img&gt;
+           *  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+           * &lt;/p&gt;
+           * ```
+           * 
+           */
+          </bare-doc>
+        </section>
+
+        <!-- pattern: bare-img -->
+        <section class="pattern">
+          <p>
+            <bare-img
+              src="http://lorempixum.com/180/136/nature/2"
+              alt="nature photo"
+              pull="left"></bare-img>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Sed sit amet ipsum mauris.
+          </p>
+          <bare-doc>
+          /**
+           * @element bare-img
+           *
+           * A basic img wrapper with float helpers
+           *
+           * ```
+           * &lt;p&gt;
+           *  &lt;bare-img src="path/to/img.jpg" pull="left" alt="cool photo"&gt;&lt;/bare-img&gt;
+           *  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+           * &lt;/p&gt;
+           * ```
+           * 
+           */
+          </bare-doc>
+        </section>
+
         <!-- pattern: bare-module -->
         <section class="pattern">
           <bare-module>
@@ -217,6 +269,111 @@
           </bare-module>
           <bare-doc url="elements/bare-module.html"></bare-doc>
         </section>
+
+        <!-- pattern: bare-module notice -->
+        <bare-module type="notice">
+          <bare-headline>This is a general notification</bare-headline>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </bare-module>
+        <bare-doc>
+          /**
+           * @element bare-module
+           *
+           * A general notification
+           *
+           * ```
+           * &lt;bare-module type="notice"&gt;
+           *   &lt;bare-headline&gt;This is a general notification&lt;/bare-headline&gt;
+           *   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+           * &lt;/bare-module&gt;
+           * ```
+           * 
+           */
+        </bare-doc>
+
+        <!-- pattern: bare-module success-notice -->
+        <bare-module type="success-notice">
+          <bare-headline>This is a notification of a successful action or event.</bare-headline>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </bare-module>
+        <bare-doc>
+          /**
+           * @element bare-module
+           *
+           * A notification of a successful action or event.
+           *
+           * ```
+           * &lt;bare-module type="success-notice"&gt;
+           *   &lt;bare-headline&gt;This is a general notification&lt;/bare-headline&gt;
+           *   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+           * &lt;/bare-module&gt;
+           * ```
+           * 
+           */
+        </bare-doc>
+
+        <!-- pattern: bare-module failure-notice -->
+        <bare-module type="failure-notice">
+          <bare-headline>This is a notification of a successful action or event.</bare-headline>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </bare-module>
+        <bare-doc>
+          /**
+           * @element bare-module
+           *
+           * A notification of a failed action or event.
+           *
+           * ```
+           * &lt;bare-module type="failure-notice"&gt;
+           *   &lt;bare-headline&gt;This is a notification of a failed action or event.&lt;/bare-headline&gt;
+           *   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+           * &lt;/bare-module&gt;
+           * ```
+           * 
+           */
+        </bare-doc>
+
+        <!-- pattern: bare-module mark -->
+        <bare-module type="mark">
+          <bare-headline>This is a marked area of content.</bare-headline>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </bare-module>
+        <bare-doc>
+          /**
+           * @element bare-module
+           *
+           * A marked area of content.
+           *
+           * ```
+           * &lt;bare-module type="mark"&gt;
+           *   &lt;bare-headline&gt;This is a marked area of content.&lt;/bare-headline&gt;
+           *   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+           * &lt;/bare-module&gt;
+           * ```
+           * 
+           */
+        </bare-doc>
+
+        <!-- pattern: bare-module highlight -->
+        <bare-module type="highlight">
+          <bare-headline>This is a highlighted area of content.</bare-headline>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </bare-module>
+        <bare-doc>
+          /**
+           * @element bare-module
+           *
+           * A marked area of content.
+           *
+           * ```
+           * &lt;bare-module type="highlight"&gt;
+           *   &lt;bare-headline&gt;This is a marked area of content.&lt;/bare-headline&gt;
+           *   &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&lt;/p&gt;
+           * &lt;/bare-module&gt;
+           * ```
+           * 
+           */
+        </bare-doc>
 
         <!-- pattern: bare-articles -->
         <section class="pattern">
@@ -322,58 +479,6 @@
              * ```
              * 
              */
-          </bare-doc>
-        </section>
-
-        <!-- pattern: bare-img -->
-        <section class="pattern">
-          <p>
-            <bare-img
-              src="http://lorempixum.com/180/136/nature/3"
-              alt="nature photo"
-              pull="right"></bare-img>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Sed sit amet ipsum mauris.
-          </p>
-          <bare-doc>
-          /**
-           * @element bare-img
-           *
-           * A basic img wrapper with float helpers
-           *
-           * ```
-           * &lt;p&gt;
-           *  &lt;bare-img src="path/to/img.jpg" pull="right" alt="cool photo"&gt;&lt;/bare-img&gt;
-           *  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-           * &lt;/p&gt;
-           * ```
-           * 
-           */
-          </bare-doc>
-        </section>
-
-        <!-- pattern: bare-img -->
-        <section class="pattern">
-          <p>
-            <bare-img
-              src="http://lorempixum.com/180/136/nature/2"
-              alt="nature photo"
-              pull="left"></bare-img>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et mollis dolor. Praesent et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt congue enim, ut porta lorem lacinia consectetur. Donec ut libero sed arcu vehicula ultricies a non tortor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Sed sit amet ipsum mauris.
-          </p>
-          <bare-doc>
-          /**
-           * @element bare-img
-           *
-           * A basic img wrapper with float helpers
-           *
-           * ```
-           * &lt;p&gt;
-           *  &lt;bare-img src="path/to/img.jpg" pull="left" alt="cool photo"&gt;&lt;/bare-img&gt;
-           *  Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-           * &lt;/p&gt;
-           * ```
-           * 
-           */
           </bare-doc>
         </section>
 

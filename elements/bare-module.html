@@ -20,7 +20,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <polymer-element name="bare-module" noscript>
   <template>
-    <link rel="stylesheet" href="css/layout.css">
     <style>
       :host {
         border: 0;
@@ -38,13 +37,47 @@
         clear: both;
       }
 
-      polyfill-next-selector { content: ':host article bare-headline h1'; }
+      polyfill-next-selector { content: ':host article bare-headline h1, :host bare-headline h1'; }
+      * /content/ bare-headline /shadow/ h1,
       * /content/ article bare-headline /shadow/ h1 {
         color: inherit;
         font-weight: 700;
         font-size: 1.25em; /* 20px */
         line-height: 1.2; /* 24px */
         margin-top: 0;
+      }
+
+      /* It would be cool to make each of these its own element
+      but I can't get extended shadow styles to apply */
+
+      :host([type$="notice"]) {
+        background-color: #fff9d9;
+        border-left: 0.25em solid #ed8; /* 4px */
+        border-radius: 0 0.25em 0.25em 0; /* 0 4px 4px 0 */
+      }
+
+      :host([type="success-notice"]) {
+        background-color: #f0f6e9;
+        border-left-color: #b3d98c;
+      }
+
+      :host([type="failure-notice"]) {
+        background-color: #fcecec;
+        border-left-color: #dd6969;
+      }
+
+      :host([type="mark"]) {
+        background-color: #fff9d9;
+      }
+
+      :host([type="highlight"]) {
+        background-color: #eee;
+      }
+
+      :host([type$="notice"]) * /content/ bare-headline,
+      :host([type="mark"]) * /content/ bare-headline,
+      :host([type="highlight"]) * /content/ bare-headline {
+        margin-top: 0.5em;
       }
     </style>
     <content></content>
