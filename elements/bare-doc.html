@@ -1,7 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="../bower_components/core-doc-viewer/context-free-parser.html">
 <link rel="import" href="../bower_components/marked-js/marked-js.html">
-<polymer-element name="bare-doc" attributes="url">
+<polymer-element name="bare-doc" attributes="url text">
   <template>
     <style>
       details {
@@ -54,7 +54,10 @@
         overflow-y: scroll;
       }
     </style>
-    <context-free-parser url="{{url}}" on-data-ready="{{createDoc}}">
+    <context-free-parser
+      url="{{url}}"
+      text="{{text}}"
+      on-data-ready="{{createDoc}}">
     </context-free-parser>
     
     <details>
@@ -69,6 +72,11 @@
   </template>
   <script>
     Polymer('bare-doc', {
+      attached: function() {
+        if (!this.url) {
+          this.text = this.textContent;
+        }
+      },
       createDoc: function(e) {
         this.doc = e.target.data.classes[0];
       }

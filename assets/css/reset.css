@@ -209,9 +209,6 @@ a {
   text-decoration: none;
   border-bottom: 1px solid rgba(34,85,221,0.1);
   }
-  a:focus {
-    outline: 1px solid rgba(34,85,221,0.3);
-  }
   a:hover {
     color: #52d;
     border-bottom-color: rgba(85,34,221,0.2);
@@ -359,7 +356,6 @@ textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0;
-  outline: 0;
 }
 select {
   -webkit-appearance: button;
@@ -420,7 +416,6 @@ input[type="search"]::-webkit-search-decoration {
 ============================================================ */
 summary {
   border: 0;
-  outline: 0;
   cursor: pointer;
 }
 

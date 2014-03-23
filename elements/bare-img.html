@@ -1,0 +1,30 @@
+<!--
+/**
+ * @element bare-img
+ *
+ * Content preceding the main body of a page or article.
+ *
+ * ```
+ * <bare-img src="path/to/img.jpg" pull="right" alt="cool photo"></bare-img>
+ * ```
+ * 
+ */
+-->
+
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<polymer-element name="bare-img" noscript attributes="src pull alt">
+  <template>
+    <style>
+      :host([pull="left"]) img {
+        float: left;
+        margin: 0 1em 0.5em 0; /* 0 16px 8px 0 */
+      }
+
+      :host([pull="right"]) img {
+        float: right;
+        margin: 0 0 0.5em 1em; /* 0 0 8px 16px */
+      }
+    </style>
+    <img src="{{src}}" alt="{{alt}}">
+  </template>
+</polymer-element>
