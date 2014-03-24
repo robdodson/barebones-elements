@@ -79,6 +79,28 @@
       :host([type="highlight"]) * /content/ bare-headline {
         margin-top: 0.5em;
       }
+
+      * /content/ details {
+        margin-left: 1.5em;
+      }
+
+      * /content/ details summary {
+        color: #25d;
+        font-weight: 700;
+        display: inline;
+      }
+
+      * /content/ details summary:hover {
+        color: #52d;
+      }
+
+      * /content/ details summary:active {
+        color: #d25;
+      }
+      
+      * /content/ details summary::-webkit-details-marker {
+        margin-left: -1em;
+      }
     </style>
     <content></content>
   </template>
